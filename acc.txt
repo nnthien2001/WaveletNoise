@@ -1,0 +1,12 @@
+<With pre-compute feature>
+{ICL}
+SVM = 98.4
+GB  = 98.4
+
+{ICL, Cable, DS05}
+SVM = 96.7
+GB  = 96.9
+
+<Raw image input>
+{ICL}
+98~99
