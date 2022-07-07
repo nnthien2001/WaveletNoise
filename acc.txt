@@ -1,3 +1,5 @@
+Wavelet(db5, lvl=3, gray) - LBP(p=8,r=1)
+
 <With pre-compute feature>
 {ICL}
 SVM = 98.4
@@ -10,3 +12,28 @@ GB  = 96.9
 <Raw image input>
 {ICL}
 98~99
+
+<wavelet only>
+{ICL}
+SVM = 90~91
+
+<noise only>
+{ICL}
+SVM = 95~96
+
+
+=======================================
+LBP(p=8, r=1) on Wavelet(db5, lvl=3, gray)
+
+{ICL}
+SVM = 70~75
+
+
+=======================================
+Wavelet(haar, lvl=1, bgr)
+{ICL}
+SVM = 94~95
+
+Wavelet(haar, lvl=3, bgr); drop low pass
+{ICL}
+SVM = 96
