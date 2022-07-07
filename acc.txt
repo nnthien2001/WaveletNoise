@@ -9,31 +9,29 @@ GB  = 98.4
 SVM = 96.7
 GB  = 96.9
 
-<Raw image input>
-{ICL}
+<Raw image input> {ICL}
 98~99
 
-<wavelet only>
-{ICL}
+<wavelet only> {ICL}
 SVM = 90~91
 
-<noise only>
-{ICL}
+<noise only> {ICL}
 SVM = 95~96
 
 
 =======================================
-LBP(p=8, r=1) on Wavelet(db5, lvl=3, gray)
-
-{ICL}
+LBP(p=8, r=1) on Wavelet(db5, lvl=3, gray) {ICL}
+--cat 59*10 pins--
 SVM = 70~75
 
+LBP(p=8, r=1) on Wavelet(haar, lvl=1, drop low pass, gray) {ICL}
+--avg 59 pins--
+SVM = 72
 
 =======================================
-Wavelet(haar, lvl=1, bgr)
-{ICL}
+Wavelet(haar, lvl=1, bgr) {ICL}
 SVM = 94~95
 
-Wavelet(haar, lvl=3, bgr); drop low pass
+Wavelet(haar, lvl=3, drop low pass, bgr)
 {ICL}
 SVM = 96
