@@ -29,9 +29,24 @@ LBP(p=8, r=1) on Wavelet(haar, lvl=1, drop low pass, gray) {ICL}
 SVM = 72
 
 =======================================
+(1)
 Wavelet(haar, lvl=1, bgr) {ICL}
 SVM = 94~95
 
+(2)
 Wavelet(haar, lvl=3, drop low pass, bgr)
 {ICL}
 SVM = 96
+
+(3)
+LBP(p=8, r=1, bgr) {ICL}
+SVM = 92~95
+
+(4)
+LBP(p=8, r=1, gray) {ICL}
+SVM = 93~95
+
+(1)+(4)
+98.1
+(2)+(4)
+98.4
