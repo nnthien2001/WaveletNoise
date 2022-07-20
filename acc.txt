@@ -29,24 +29,63 @@ LBP(p=8, r=1) on Wavelet(haar, lvl=1, drop low pass, gray) {ICL}
 SVM = 72
 
 =======================================
-(1)
+(w1)
 Wavelet(haar, lvl=1, bgr) {ICL}
 SVM = 94~95
 
-(2)
-Wavelet(haar, lvl=3, drop low pass, bgr)
-{ICL}
+(w2)
+Wavelet(haar, lvl=3, drop low pass, bgr) {ICL}
 SVM = 96
 
-(3)
+(w3)
+Wavelet(db5, lvl3, bgr) {ICL}
+SVM = 97.4
+
+(w4)
+Wavelet(db5, lvl3, ycc) {ICL}
+SVM = 99.4
+
+
+(l1)
 LBP(p=8, r=1, bgr) {ICL}
 SVM = 92~95
 
-(4)
+(l2)
 LBP(p=8, r=1, gray) {ICL}
 SVM = 93~95
 
-(1)+(4)
+(l3)
+LBP(p=8, r=1, HSV) {ICL}
+SVM = 96~97
+
+
+==========================================
+random seed = 42
+(w1)+(l2)
 98.1
-(2)+(4)
+(w2)+(l2)
 98.4
+
+(w2)+(l3)
+99.1
+(w3)+(l3)
+99.2
+
+===============================================
+Best performance
+Wavelet(db5, lvl3, ycc) 
+{ICL}
+SVM = 99.4
+{Cable}
+SVM = 99.8
+
+=============Test best model=================
+Acc for cropped img
+
+YCC
+        mid     up-left
+500     97.7    94
+1000    99      98
+
+BGR
+1000    97
