@@ -90,6 +90,7 @@ Wavelet(db5, lvl3, bgr) +
 LBP(p=8, r=1, HSV) 
 {ICL} 99.2
 {Rose} 96.4
+{Face} 99.3
 
 ===============================================
 Best performance
