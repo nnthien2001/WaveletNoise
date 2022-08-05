@@ -38,12 +38,16 @@ Wavelet(haar, lvl=3, drop low pass, bgr) {ICL}
 SVM = 96
 
 (w3)
-Wavelet(db5, lvl3, bgr) {ICL}
-SVM = 97.4
+Wavelet(db5, lvl3, bgr) 
+{ICL} SVM = 97.4
+{Rose} SVM = 92.9
+{Face} SVM = 88.8
 
 (w4)
-Wavelet(db5, lvl3, ycc) {ICL}
-SVM = 99.4
+Wavelet(db5, lvl3, ycc) 
+{ICL} SVM = 99.4
+{Rose} SVM = 94.3
+{Face} SVM = 88.8
 
 
 (l1)
@@ -51,12 +55,19 @@ LBP(p=8, r=1, bgr) {ICL}
 SVM = 92~95
 
 (l2)
-LBP(p=8, r=1, gray) {ICL}
-SVM = 93~95
+LBP(p=8, r=1, gray) 
+{ICL} SVM = 93~95
+{Face} SVM = 98.9
 
 (l3)
-LBP(p=8, r=1, HSV) {ICL}
-SVM = 96~97
+LBP(p=8, r=1, HSV) 
+{ICL} SVM = 95~97
+{Rose} SVM = 92.5
+{Face} SVM = 98.7
+
+(l4)
+LBP(p=8, r=1, gray, noise)
+{Face} SVM = 93.5
 
 
 ==========================================
@@ -66,10 +77,19 @@ random seed = 42
 (w2)+(l2)
 98.4
 
-(w2)+(l3)
+Wavelet(db5, lvl3, drop low pass, bgr) +
+LBP(p=8, r=1, HSV) 
 99.1
-(w3)+(l3)
-99.2
+
+Wavelet(db5, lvl3, bgr) +
+LBP(p=8, r=1, gray)
+{Rose} 95.8 
+
+
+Wavelet(db5, lvl3, bgr) +
+LBP(p=8, r=1, HSV) 
+{ICL} 99.2
+{Rose} 96.4
 
 ===============================================
 Best performance
