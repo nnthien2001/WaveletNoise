@@ -171,31 +171,30 @@ if __name__ == "__main__":
     assert os.path.exists(PATH_DUMP), "Path does not exist"
 
     queries = (
-
-        Query(WaveletTransformer(wtname='db5',level=3), 
-              None, 
-              3*2*(3*3+1),
-              'wt_BGR_3lv_db5'),
-
-        Query(LBPTransformer(gray=True), 
-              None, 
-              59,
-              'lbp_gray'),
-
-        Query(LBPTransformer(), 
-              cv2.COLOR_BGR2HSV, 
-              59,
-              'lbp_HSV'),
-
-        Query(LBPTransformer(gray=True, noise=True), 
-              None, 
-              59,
-              'lbp_noise'),
-
         Query(WaveletTransformer(wtname='db11',level=3), 
               cv2.COLOR_BGR2YCrCb,
               3*2*(3*3+1),
               'wt_YCC_3lv_db11'),
+
+        # Query(WaveletTransformer(wtname='db5',level=3), 
+        #       None, 
+        #       3*2*(3*3+1),
+        #       'wt_BGR_3lv_db5'),
+
+        # Query(LBPTransformer(gray=True), 
+        #       None, 
+        #       59,
+        #       'lbp_gray'),
+
+        # Query(LBPTransformer(), 
+        #       cv2.COLOR_BGR2HSV, 
+        #       59,
+        #       'lbp_HSV'),
+
+        # Query(LBPTransformer(gray=True, noise=True), 
+        #       None, 
+        #       59,
+        #       'lbp_noise'),
     ) 
 
     for q in tqdm(queries):
