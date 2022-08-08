@@ -1,1 +1,1 @@
-Classify image by filtering wavelet and noise
+Image recapture detection using Wavelet and LBP
